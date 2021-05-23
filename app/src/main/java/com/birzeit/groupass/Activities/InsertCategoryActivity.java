@@ -1,4 +1,4 @@
-package com.example.groupassigment1.Activities;
+package com.birzeit.groupass.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -23,30 +23,25 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class InsertBookActivity extends AppCompatActivity {
+public class InsertCategoryActivity extends AppCompatActivity {
 
-    private EditText bookName_txt,bookPhoto_txt,bookAuthor_txt,publisher_txt,originalLanguage_txt,releaseDate_txt;
-    String bookName="",bookPhoto="",bookCategory="",bookAuthor="",publisher="",originalLanguage="",releaseDate="";
+    private EditText categoryName_txt, imageUrl_txt;
+    String categoryName = "", imageUrl = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_insert_book);
+        setContentView(R.layout.activity_insert_category);
         setupViews();
     }
 
-    public void setupViews(){
-        bookName_txt = findViewById(R.id.bookName_txt);
-        bookPhoto_txt = findViewById(R.id.bookPhoto_txt);
-        bookAuthor_txt = findViewById(R.id.bookAuthor_txt);
-        publisher_txt = findViewById(R.id.publisher_txt);
-        originalLanguage_txt = findViewById(R.id.originalLanguage_txt);
-        releaseDate_txt = findViewById(R.id.releaseDate_txt);
+    private void setupViews() {
+        categoryName_txt = findViewById(R.id.bookName_txt);
+        imageUrl_txt = findViewById(R.id.imageUrl_txt);
     }
 
     public void add_btn_OnClick(View view) {
-        bookCategory=getIntent().getStringExtra("categoryData");
-        String restUrl = "http://192.168.1.124:80/GroupAss/addBook.php";
+        String restUrl = "http://192.168.1.124:80/GroupAss/addCategory.php";
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -55,53 +50,31 @@ public class InsertBookActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.INTERNET},
                     123);
 
-        } else{
-            InsertBookActivity.SendPostRequest runner = new SendPostRequest();
+        } else {
+            InsertCategoryActivity.SendPostRequest runner = new InsertCategoryActivity.SendPostRequest();
             runner.execute(restUrl);
         }
     }
 
-
     private String processRequest(String restUrl) throws UnsupportedEncodingException {
 
-        bookName = bookName_txt.getText().toString().trim();
-        bookPhoto = bookPhoto_txt.getText().toString().trim();
-        bookAuthor = bookAuthor_txt.getText().toString().trim();
-        publisher = publisher_txt.getText().toString().trim();
-        originalLanguage = originalLanguage_txt.getText().toString().trim();
-        releaseDate = releaseDate_txt.getText().toString().trim();
-        bookCategory=getIntent().getStringExtra("categoryData");
-
         String text = "";
+        categoryName = categoryName_txt.getText().toString().trim();
+        imageUrl = imageUrl_txt.getText().toString().trim();
 
-        if (!bookName.equals("") && !bookPhoto.equals("") && !bookAuthor.equals("") && !publisher.equals("") && !originalLanguage.equals("") && !releaseDate.equals("")) {
+        if (!categoryName.equals("") && !imageUrl.equals("")) {
+            String data = URLEncoder.encode("category_name", "UTF-8")
+                    + "=" + URLEncoder.encode(categoryName, "UTF-8");
 
-            String data = URLEncoder.encode("bookName", "UTF-8")
-                    + "=" + URLEncoder.encode(bookName, "UTF-8");
+            data += "&" + URLEncoder.encode("category_imageId", "UTF-8") + "="
+                    + URLEncoder.encode(imageUrl, "UTF-8");
 
-            data += "&" + URLEncoder.encode("bookPhoto", "UTF-8") + "="
-                    + URLEncoder.encode(bookPhoto, "UTF-8");
 
-            data += "&" + URLEncoder.encode("bookCategory", "UTF-8") + "="
-                    + URLEncoder.encode(bookCategory, "UTF-8");
-
-            data += "&" + URLEncoder.encode("bookAuthor", "UTF-8") + "="
-                    + URLEncoder.encode(bookAuthor, "UTF-8");
-
-            data += "&" + URLEncoder.encode("publisher", "UTF-8") + "="
-                    + URLEncoder.encode(publisher, "UTF-8");
-
-            data += "&" + URLEncoder.encode("originalLanguage", "UTF-8") + "="
-                    + URLEncoder.encode(originalLanguage, "UTF-8");
-
-            data += "&" + URLEncoder.encode("releaseDate", "UTF-8") + "="
-                    + URLEncoder.encode(releaseDate, "UTF-8");
 
             BufferedReader reader = null;
 
             // Send data
             try {
-
                 // Defined URL  where to send data
                 URL url = new URL(restUrl);
 
@@ -157,14 +130,13 @@ public class InsertBookActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            Toast.makeText(InsertBookActivity.this, s, Toast.LENGTH_LONG).show();
-            if(s.trim().equals("Insert Book Success") ){
-                Intent intent = new Intent(InsertBookActivity.this,BookListActivity.class);
-                intent.putExtra("categoryData",bookCategory);
+           Toast.makeText(InsertCategoryActivity.this, s, Toast.LENGTH_LONG).show();
+            if(s.trim().equals("Insert Category Success") ){
+                Intent intent = new Intent(InsertCategoryActivity.this, CategoryListActivity.class);
                 startActivity(intent);
                 finish();
-            }else if (s.trim().equals("Failed To insert Book")){
-                Toast.makeText(InsertBookActivity.this, "This book is already inserted", Toast.LENGTH_LONG).show();
+            }else if (s.trim().equals("Failed To insert Category")) {
+                Toast.makeText(InsertCategoryActivity.this, "This book is already inserted", Toast.LENGTH_LONG).show();
             }
         }
     }

@@ -220,10 +220,10 @@
         android:id="@+id/imageBook"
         android:layout_width="133dp"
         android:layout_height="150dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="216dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />

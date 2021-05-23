@@ -1,4 +1,4 @@
-package com.example.groupassigment1.Activities;
+package com.birzeit.groupass.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,8 +56,10 @@ public class BookListActivity extends AppCompatActivity {
     }
 
     private void setupViews(){
+
         book_listView = findViewById(R.id.book_listView);
     }
+
     public void insert_btn_OnClick(View view) {
 
         Intent intent = new Intent(this,InsertBookActivity.class);
@@ -68,7 +70,7 @@ public class BookListActivity extends AppCompatActivity {
     private void loadData() {
 
         category = getIntent().getStringExtra("categoryData");
-        String url = "http:/192.168.1.124:80/GroupAss/getBookList.php?cat="+category;
+        String url = "http://192.168.1.124:80/GroupAss/getBookList.php?cat="+category;
         JsonObjectRequest jor = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override

@@ -1,4 +1,4 @@
-package com.example.groupassigment1.Activities;
+package com.birzeit.groupass.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

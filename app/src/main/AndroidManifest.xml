@@ -13,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GroupAssigment1">
-        <activity android:name=".Activities.InsertBookActivity"></activity>
-        <activity android:name=".Activities.EditBookActivity" />
-        <activity android:name=".Activities.DetailesBookActivity" />
-        <activity android:name=".Activities.InsertCategoryActivity" />
-        <activity android:name=".Activities.BookListActivity" />
-        <activity android:name=".Activities.CategoryListActivity" />
-        <activity android:name=".Activities.HomeActivity">
+        <activity android:name="com.birzeit.groupass.Activities.InsertBookActivity"></activity>
+        <activity android:name="com.birzeit.groupass.Activities.EditBookActivity" />
+        <activity android:name="com.birzeit.groupass.Activities.DetailesBookActivity" />
+        <activity android:name="com.birzeit.groupass.Activities.InsertCategoryActivity" />
+        <activity android:name="com.birzeit.groupass.Activities.BookListActivity" />
+        <activity android:name="com.birzeit.groupass.Activities.CategoryListActivity" />
+        <activity android:name="com.birzeit.groupass.Activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

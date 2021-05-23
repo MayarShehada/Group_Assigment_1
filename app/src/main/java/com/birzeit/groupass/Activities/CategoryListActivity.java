@@ -1,4 +1,4 @@
-package com.example.groupassigment1.Activities;
+package com.birzeit.groupass.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -131,8 +131,6 @@ public class CategoryListActivity extends AppCompatActivity {
                 Log.e("Main"," data search"+newText);
 
                 customAdapter.getFilter().filter(newText);
-
-
 
                 return true;
             }

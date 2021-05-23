@@ -1,4 +1,4 @@
-package com.example.groupassigment1.Activities;
+package com.birzeit.groupass.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -38,8 +38,6 @@ public class EditBookActivity extends AppCompatActivity {
         publisher_txt.setText(getIntent().getStringExtra("publisher"));
         originalLanguage_txt.setText(getIntent().getStringExtra("originalLanguage"));
         releaseDate_txt.setText(getIntent().getStringExtra("releaseDate"));
-
-
 
     }
     public void setupViews(){
