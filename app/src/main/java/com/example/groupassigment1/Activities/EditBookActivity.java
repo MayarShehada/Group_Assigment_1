@@ -1,4 +1,4 @@
-package com.example.groupassapplication.Activites;
+package com.example.groupassigment1.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.groupassapplication.R;
+import com.example.groupassigment1.R;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

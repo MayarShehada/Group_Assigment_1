@@ -1,4 +1,4 @@
-package com.example.groupassapplication;
+package com.example.groupassigment1;
 
 import org.junit.Test;
 

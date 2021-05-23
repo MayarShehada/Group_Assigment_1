@@ -5,32 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activites.DetailesBookActivity">
+    tools:context=".Activities.DetailesBookActivity">
 
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="385dp"
-        android:layout_height="573dp"
+        android:layout_width="373dp"
+        android:layout_height="515dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="92dp"
         android:background="@drawable/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="544dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/detailed_book"
+        android:textColor="#3A3D49"
+        android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:layout_width="313dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +62,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/releaseDate_txt"
             android:layout_width="164dp"
             android:layout_height="46dp"
@@ -61,7 +76,7 @@
     <LinearLayout
         android:layout_width="308dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginBottom="80dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +95,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/originalLanguage_txt"
             android:layout_width="160dp"
             android:layout_height="46dp"
@@ -94,14 +109,15 @@
             android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="313dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginBottom="160dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -115,7 +131,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/publisher_txt"
             android:layout_width="164dp"
             android:layout_height="46dp"
@@ -125,16 +141,17 @@
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="313dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="228dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -151,7 +168,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/bookAuthor_txt"
             android:layout_width="164dp"
             android:layout_height="46dp"
@@ -162,33 +179,14 @@
             android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="245dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="680dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/detailed_book"
-        android:textColor="#3A3D49"
-        android:textColorHint="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.662"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
     <LinearLayout
         android:layout_width="313dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="300dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -206,7 +204,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/bookName_txt"
             android:layout_width="164dp"
             android:layout_height="46dp"
@@ -220,14 +218,14 @@
 
     <ImageView
         android:id="@+id/imageBook"
-        android:layout_width="136dp"
-        android:layout_height="168dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="133dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/todo" />
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,8 @@
-package com.example.groupassapplication.Models;
+package com.example.groupassigment1.Models;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     int id;
     String bookName;
     String bookPhoto;

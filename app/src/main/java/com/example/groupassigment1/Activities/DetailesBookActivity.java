@@ -1,17 +1,18 @@
-package com.example.groupassapplication.Activites;
+package com.example.groupassigment1.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.groupassapplication.R;
+import com.example.groupassigment1.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailesBookActivity extends AppCompatActivity {
 
-    private EditText bookName_txt,bookPhoto_txt,bookAuthor_txt,publisher_txt,originalLanguage_txt,releaseDate_txt;
+    private TextView bookName_txt,bookPhoto_txt,bookAuthor_txt,publisher_txt,originalLanguage_txt,releaseDate_txt;
     private ImageView imageBook;
 
     @Override
